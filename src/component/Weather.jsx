@@ -41,7 +41,6 @@ export const Weather = () => {
         alert(data.message);
         return;
       }
-      console.log(data);
       const icon = allIcons[data.weather[0].icon] || clear;
       setWeatherData({
         humidity: data.main.humidity,
@@ -55,7 +54,7 @@ export const Weather = () => {
     }
   };
   useEffect(() => {
-    searchBar("London");
+    searchBar("Cairo");
   }, []);
   return (
     <div className='container'>
